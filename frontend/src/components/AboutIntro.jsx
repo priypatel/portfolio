@@ -13,7 +13,7 @@ export default function AboutIntro() {
   const rightRef = useScrollReveal();
 
   return (
-    <section id="about-intro" className="relative z-[1] max-w-[820px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24">
+    <section id="about-intro" className="relative z-[1] max-w-[1140px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24">
       <div
         ref={headerRef}
         className="reveal flex items-baseline justify-between mb-10 sm:mb-14 pt-16 sm:pt-24"

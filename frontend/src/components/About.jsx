@@ -12,7 +12,7 @@ export default function About() {
   const cardRef = useScrollReveal();
 
   return (
-    <section id="about" className="relative z-[1] max-w-[820px] mx-auto px-5 sm:px-8 pb-20 sm:pb-[120px]">
+    <section id="about" className="relative z-[1] max-w-[1140px] mx-auto px-5 sm:px-8 pb-20 sm:pb-[120px]">
       <div
         ref={headerRef}
         className="reveal flex items-baseline justify-between mb-10 sm:mb-14 pt-16 sm:pt-24"

@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function Divider() {
   return (
     <div
-      className="relative z-[1] max-w-[820px] mx-auto h-px"
+      className="relative z-[1] max-w-[1140px] mx-auto h-px"
       style={{ background: 'var(--border)' }}
     />
   );

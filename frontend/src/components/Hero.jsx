@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-[1] min-h-svh flex flex-col justify-center pt-24 sm:pt-[120px] pb-16 sm:pb-20 max-w-[820px] mx-auto px-5 sm:px-8"
+      className="relative z-[1] min-h-svh flex flex-col justify-center pt-24 sm:pt-[120px] pb-16 sm:pb-20 max-w-[1140px] mx-auto px-5 sm:px-8"
     >
       <div
         className="anim-1 flex items-center gap-2 text-[11px] sm:text-xs font-medium uppercase mb-8 sm:mb-10"
