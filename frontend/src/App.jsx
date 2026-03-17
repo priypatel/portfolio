@@ -1,5 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import AboutIntro from './components/AboutIntro';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -20,6 +21,8 @@ export default function App() {
     <>
       <Nav />
       <Hero />
+      <Divider />
+      <AboutIntro />
       <Divider />
       <Skills />
       <Divider />

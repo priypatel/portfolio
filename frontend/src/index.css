@@ -82,6 +82,7 @@ body::before {
   transition: color 0.2s, background 0.2s;
   letter-spacing: 0.01em;
   text-decoration: none;
+  white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active {
   color: var(--text);
@@ -111,8 +112,23 @@ body::before {
   cursor: default;
   transition: border-color 0.25s, background 0.25s, transform 0.2s;
 }
-.skill-pill.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, background 0.25s; }
-.skill-pill:hover { border-color: var(--border-hover) !important; background: #1a1a1a !important; transform: translateY(-2px) !important; }
+.skill-pill.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, background 0.25s;
+}
+.skill-pill:hover {
+  border-color: var(--border-hover) !important;
+  background: #1a1a1a !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── Experience grid ── */
+.exp-item-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+}
 
 /* ── Experience items ── */
 .exp-item {
@@ -150,10 +166,14 @@ body::before {
 .contact-link:hover { border-color: var(--border-hover); background: rgba(255,255,255,0.06); }
 
 /* ── Responsive ── */
-@media (max-width: 640px) {
-  .exp-item { grid-template-columns: 1fr !important; gap: 6px !important; }
-  .about-grid { grid-template-columns: 1fr !important; }
-  .projects-grid { grid-template-columns: 1fr !important; }
-  .featured-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-  .section-header { flex-direction: column; gap: 4px; padding-top: 72px !important; }
+
+/* Tablet and below (< 768px) */
+@media (max-width: 767px) {
+  .nav-link { padding: 4px 10px; font-size: 12px; }
+  .exp-item-grid { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* Mobile only (< 640px) */
+@media (max-width: 639px) {
+  .scroll-line { display: none; }
 }

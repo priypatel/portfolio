@@ -2,21 +2,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-[1] min-h-screen flex flex-col justify-center pt-[120px] pb-20 max-w-[820px] mx-auto px-8"
+      className="relative z-[1] min-h-svh flex flex-col justify-center pt-24 sm:pt-[120px] pb-16 sm:pb-20 max-w-[820px] mx-auto px-5 sm:px-8"
     >
       <div
-        className="anim-1 flex items-center gap-2 text-xs font-medium uppercase mb-10"
+        className="anim-1 flex items-center gap-2 text-[11px] sm:text-xs font-medium uppercase mb-8 sm:mb-10"
         style={{ letterSpacing: '0.12em', color: 'var(--muted)' }}
       >
-        <span className="w-6 h-px block" style={{ background: 'var(--muted2)' }} />
+        <span className="w-5 sm:w-6 h-px block shrink-0" style={{ background: 'var(--muted2)' }} />
         Full Stack Developer · 2 Years
       </div>
 
       <h1
-        className="anim-2 font-extrabold leading-[0.92] tracking-[-0.04em] mb-8"
+        className="anim-2 font-extrabold leading-[0.92] tracking-[-0.04em] mb-6 sm:mb-8"
         style={{
           fontFamily: "'Syne', sans-serif",
-          fontSize: 'clamp(56px, 10vw, 96px)',
+          fontSize: 'clamp(48px, 10vw, 96px)',
           color: 'var(--text)',
         }}
       >
@@ -26,7 +26,7 @@ export default function Hero() {
       </h1>
 
       <p
-        className="anim-3 text-[17px] font-light max-w-[480px] leading-[1.75] mb-[52px]"
+        className="anim-3 text-[15px] sm:text-[17px] font-light max-w-[480px] leading-[1.75] mb-10 sm:mb-[52px]"
         style={{ color: 'var(--muted)' }}
       >
         I build{' '}
@@ -37,23 +37,23 @@ export default function Hero() {
         Currently open to new opportunities.
       </p>
 
-      <div className="anim-4 flex gap-3 flex-wrap">
+      <div className="anim-4 flex gap-2 sm:gap-3 flex-wrap">
         <a
           href="#projects"
-          className="btn-primary inline-flex items-center gap-2 text-[13px] font-medium px-6 py-[11px] rounded-full"
+          className="btn-primary inline-flex items-center gap-2 text-[12px] sm:text-[13px] font-medium px-5 sm:px-6 py-[10px] sm:py-[11px] rounded-full"
         >
           View Work ↓
         </a>
         <a
           href="#about"
-          className="btn-ghost inline-flex items-center gap-2 text-[13px] font-medium px-6 py-[11px] rounded-full"
+          className="btn-ghost inline-flex items-center gap-2 text-[12px] sm:text-[13px] font-medium px-5 sm:px-6 py-[10px] sm:py-[11px] rounded-full"
         >
           Get in Touch
         </a>
       </div>
 
       <div
-        className="anim-5 absolute bottom-10 left-8 flex items-center gap-[10px] text-[11px] uppercase"
+        className="anim-5 absolute bottom-8 sm:bottom-10 left-5 sm:left-8 flex items-center gap-[10px] text-[11px] uppercase"
         style={{ letterSpacing: '0.1em', color: 'var(--muted2)' }}
       >
         <div className="scroll-line" />

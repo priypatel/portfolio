@@ -46,33 +46,34 @@ function FeaturedCard({ project }) {
   return (
     <a
       href={project.href}
-      className="project-card featured-grid rounded-2xl p-7 relative overflow-hidden col-span-full grid gap-8"
+      className="project-card col-span-full rounded-2xl p-5 sm:p-7 relative overflow-hidden grid gap-6 sm:gap-8"
       style={{
         background: 'var(--bg3)',
         border: '1px solid var(--border)',
-        gridTemplateColumns: '1fr 1fr',
-        alignItems: 'start',
         textDecoration: 'none',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+        alignItems: 'start',
       }}
     >
       <div>
-        <div className="text-[11px] tracking-[0.1em] mb-5" style={{ color: 'var(--muted2)' }}>
+        <div className="text-[11px] tracking-[0.1em] mb-4 sm:mb-5" style={{ color: 'var(--muted2)' }}>
           {project.num}
         </div>
         <div
-          className="text-[20px] font-bold tracking-[-0.02em] mb-[10px]"
+          className="text-[18px] sm:text-[20px] font-bold tracking-[-0.02em] mb-2 sm:mb-[10px]"
           style={{ fontFamily: "'Syne', sans-serif", color: 'var(--text)' }}
         >
           {project.title}
         </div>
-        <div className="text-[13px] font-light leading-[1.7] mb-6" style={{ color: 'var(--muted)' }}>
+        <div className="text-[13px] font-light leading-[1.7] mb-5 sm:mb-6" style={{ color: 'var(--muted)' }}>
           {project.desc}
         </div>
         <StackTags tags={project.stack} />
       </div>
-      <div>
+
+      <div className="hidden sm:block">
         <div
-          className="w-full h-40 rounded-xl flex items-center justify-center"
+          className="w-full h-36 sm:h-40 rounded-xl flex items-center justify-center"
           style={{ background: 'linear-gradient(135deg,#1a1a1a 0%,#222 100%)', border: '1px solid var(--border)' }}
         >
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -83,7 +84,8 @@ function FeaturedCard({ project }) {
           </svg>
         </div>
       </div>
-      <span className="project-arrow absolute top-6 right-6 text-base" style={{ color: 'var(--muted2)' }}>↗</span>
+
+      <span className="project-arrow absolute top-5 sm:top-6 right-5 sm:right-6 text-base" style={{ color: 'var(--muted2)' }}>↗</span>
     </a>
   );
 }
@@ -92,20 +94,20 @@ function ProjectCard({ project }) {
   return (
     <a
       href={project.href}
-      className="project-card rounded-2xl p-7 relative overflow-hidden block"
+      className="project-card rounded-2xl p-5 sm:p-7 relative overflow-hidden block"
       style={{ background: 'var(--bg3)', border: '1px solid var(--border)', textDecoration: 'none' }}
     >
-      <span className="project-arrow absolute top-6 right-6 text-base" style={{ color: 'var(--muted2)' }}>↗</span>
-      <div className="text-[11px] tracking-[0.1em] mb-5" style={{ color: 'var(--muted2)' }}>
+      <span className="project-arrow absolute top-5 sm:top-6 right-5 sm:right-6 text-base" style={{ color: 'var(--muted2)' }}>↗</span>
+      <div className="text-[11px] tracking-[0.1em] mb-4 sm:mb-5" style={{ color: 'var(--muted2)' }}>
         {project.num}
       </div>
       <div
-        className="text-[20px] font-bold tracking-[-0.02em] mb-[10px]"
+        className="text-[18px] sm:text-[20px] font-bold tracking-[-0.02em] mb-2 sm:mb-[10px]"
         style={{ fontFamily: "'Syne', sans-serif", color: 'var(--text)' }}
       >
         {project.title}
       </div>
-      <div className="text-[13px] font-light leading-[1.7] mb-6" style={{ color: 'var(--muted)' }}>
+      <div className="text-[13px] font-light leading-[1.7] mb-5 sm:mb-6" style={{ color: 'var(--muted)' }}>
         {project.desc}
       </div>
       <StackTags tags={project.stack} />
@@ -136,21 +138,22 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="relative z-[1] max-w-[820px] mx-auto px-8 pb-24">
+    <section id="projects" className="relative z-[1] max-w-[820px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24">
       <div
         ref={headerRef}
-        className="reveal section-header flex items-baseline justify-between mb-14 pt-24"
+        className="reveal flex items-baseline justify-between mb-10 sm:mb-14 pt-16 sm:pt-24"
       >
         <h2
           className="font-bold tracking-[-0.03em]"
-          style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(32px,5vw,48px)', color: 'var(--text)' }}
+          style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(28px,5vw,48px)', color: 'var(--text)' }}
         >
           Projects
         </h2>
-        <span className="text-[11px] tracking-[0.1em]" style={{ color: 'var(--muted2)' }}>03</span>
+        <span className="text-[11px] tracking-[0.1em]" style={{ color: 'var(--muted2)' }}>04</span>
       </div>
 
-      <div ref={gridRef} className="projects-grid grid gap-3" style={{ gridTemplateColumns: '1fr 1fr' }}>
+      {/* grid-cols-1 on mobile, grid-cols-2 on sm+ */}
+      <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {PROJECTS.map((p, i) =>
           p.featured ? <FeaturedCard key={i} project={p} /> : <ProjectCard key={i} project={p} />
         )}

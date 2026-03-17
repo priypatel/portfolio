@@ -2,6 +2,17 @@ import { useRef, useEffect } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const SKILLS = [
+    {
+    name: 'JavaScript',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#F7DF1E" strokeWidth="1.3" />
+        <path d="M8 16.5c0 1.5 2.5 2.5 2.5 0V11" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M14 16c.5.8 1.5 1 2.5.5" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M14 11v5" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
+      </svg>
+    ),
+  },
   {
     name: 'React / Next.js',
     icon: (
@@ -14,11 +25,20 @@ const SKILLS = [
     ),
   },
   {
-    name: 'Node.js / Express',
+    name: 'Node.js',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
         <path d="M12 2L3 7v10l9 5 9-5V7L12 2z" stroke="#68A063" strokeWidth="1.3" />
         <path d="M12 2v20M3 7l9 5M21 7l-9 5" stroke="#68A063" strokeWidth="1.3" opacity="0.5" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Express',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+        <path d="M3 8h18M3 12h12M3 16h8" stroke="#888" strokeWidth="1.4" strokeLinecap="round" />
+        <circle cx="19" cy="16" r="2" stroke="#888" strokeWidth="1.2" />
       </svg>
     ),
   },
@@ -40,12 +60,39 @@ const SKILLS = [
     ),
   },
   {
-    name: 'PostgreSQL',
+    name: 'Redux',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
-        <ellipse cx="12" cy="7" rx="7" ry="3" stroke="#336791" strokeWidth="1.3" />
-        <path d="M5 7v10c0 1.66 3.13 3 7 3s7-1.34 7-3V7" stroke="#336791" strokeWidth="1.3" />
-        <line x1="5" y1="12" x2="19" y2="12" stroke="#336791" strokeWidth="1" opacity="0.5" />
+        <path d="M15.5 4.5C17.5 4.5 19 6 19 8c0 1.5-.8 2.8-2 3.5" stroke="#764ABC" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M8.5 4.5C6.5 4.5 5 6 5 8c0 1.5.8 2.8 2 3.5" stroke="#764ABC" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M7 15.5C7 17.5 8.5 19 10.5 19H13c2 0 3.5-1.5 3.5-3.5 0-1.2-.6-2.3-1.5-3" stroke="#764ABC" strokeWidth="1.3" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="2" stroke="#764ABC" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    name: 'MUI',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+        <path d="M2 7l7 4V7l7 4V7l6 3.5v7L15 21v-4l-6 3.5V21L2 17.5V7z" stroke="#007FFF" strokeWidth="1.2" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Prompt Engineering',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+        <path d="M8 9h8M8 13h5" stroke="#f59e0b" strokeWidth="1.3" strokeLinecap="round" />
+        <path d="M5 3h14a2 2 0 012 2v10a2 2 0 01-2 2H8l-4 4V5a2 2 0 012-2z" stroke="#f59e0b" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    name: 'AI / LLMs',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+        <circle cx="12" cy="12" r="3" stroke="#a78bfa" strokeWidth="1.2" />
+        <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M16.9 16.9l1.5 1.5M5.6 18.4l1.4-1.4M16.9 7.1l1.5-1.5" stroke="#a78bfa" strokeWidth="1.3" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -67,17 +114,6 @@ const SKILLS = [
         <circle cx="19" cy="5" r="2" stroke="#F05033" strokeWidth="1.2" />
         <circle cx="12" cy="19" r="2" stroke="#F05033" strokeWidth="1.2" />
         <path d="M7 5h10M19 7v8a2 2 0 01-2 2h-3M5 7v3.5A2.5 2.5 0 007.5 13H10" stroke="#F05033" strokeWidth="1.2" />
-      </svg>
-    ),
-  },
-  {
-    name: 'JavaScript',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
-        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#F7DF1E" strokeWidth="1.3" />
-        <path d="M8 16.5c0 1.5 2.5 2.5 2.5 0V11" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
-        <path d="M14 16c.5.8 1.5 1 2.5.5" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
-        <path d="M14 11v5" stroke="#F7DF1E" strokeWidth="1.3" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -108,36 +144,36 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="relative z-[1] max-w-[820px] mx-auto px-8 pb-24">
+    <section id="skills" className="relative z-[1] max-w-[820px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24">
       <div
         ref={headerRef}
-        className="reveal section-header flex items-baseline justify-between mb-14 pt-24"
+        className="reveal flex items-baseline justify-between mb-10 sm:mb-14 pt-16 sm:pt-24"
       >
         <h2
           className="font-bold tracking-[-0.03em]"
-          style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(32px,5vw,48px)', color: 'var(--text)' }}
+          style={{ fontFamily: "'Syne', sans-serif", fontSize: 'clamp(28px,5vw,48px)', color: 'var(--text)' }}
         >
           Skills
         </h2>
-        <span className="text-[11px] tracking-[0.1em]" style={{ color: 'var(--muted2)' }}>01</span>
+        <span className="text-[11px] tracking-[0.1em]" style={{ color: 'var(--muted2)' }}>02</span>
       </div>
 
       <p
         ref={introRef}
-        className="reveal text-[15px] font-light max-w-[480px] mb-12 leading-[1.8]"
+        className="reveal text-[14px] sm:text-[15px] font-light max-w-[480px] mb-10 sm:mb-12 leading-[1.8]"
         style={{ color: 'var(--muted)' }}
       >
         Two years in — focused on the full stack. These are the tools I reach for every day.
       </p>
 
-      <div ref={gridRef} className="flex flex-wrap gap-[10px]">
+      <div ref={gridRef} className="flex flex-wrap gap-[8px] sm:gap-[10px]">
         {SKILLS.map(({ name, icon }) => (
           <div
             key={name}
-            className="skill-pill inline-flex items-center gap-[10px] px-[18px] py-[10px] rounded-full text-[13px]"
+            className="skill-pill inline-flex items-center gap-[8px] sm:gap-[10px] px-3 sm:px-[18px] py-[8px] sm:py-[10px] rounded-full text-[12px] sm:text-[13px]"
             style={{ background: 'var(--bg3)', border: '1px solid var(--border)', color: 'var(--text)' }}
           >
-            <span className="flex items-center justify-center w-5 h-5 shrink-0">{icon}</span>
+            <span className="flex items-center justify-center w-4 sm:w-5 h-4 sm:h-5 shrink-0">{icon}</span>
             {name}
           </div>
         ))}
