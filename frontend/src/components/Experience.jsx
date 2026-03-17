@@ -3,6 +3,20 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const EXPERIENCE = [
   {
+    year: 'June 2025 — Feb 2026',
+    role: 'Junior Software Engineer',
+    company: 'Ninand Techserve LLP · Ahmedabad, India',
+    desc: 'Built role-based modules, OTP verification flows, and middleware-protected routes to automate internal processes, enhance access control, and improve platform-wide security. Integrated REST APIs with streamlined database interactions, reducing redundant calls and improving application responsiveness across high-usage modules. Enhanced system performance through React.js optimization, improved state management, and responsive design across devices.',
+    tags: ['React.js', 'Node.js', 'REST API', 'Role-Based Auth', 'OTP Flows', 'State Management'],
+  },
+  {
+    year: 'Jul 2024 — May 2025',
+    role: 'Junior Software Engineer',
+    company: 'Zimbs Technology LLP · Ahmedabad, India',
+    desc: 'Contributed to full-stack development using React, Node.js, Express, MongoDB, and Mongoose — supporting feature expansion and strengthening the overall application foundation. Built structured CRUD operations and REST API flows that improved data reliability and ensured smoother interactions across modules. Applied Express middleware for validation, routing control, and request handling, resulting in more predictable backend behavior and secure service communication.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'REST API'],
+  },
+  {
     year: 'Jan 2024 — Apr 2024',
     role: 'Web Developer Intern',
     company: 'Verifast Technologies India Pvt. Ltd. · Ahmedabad, India',

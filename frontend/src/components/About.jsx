@@ -1,9 +1,9 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const CONTACTS = [
-  { label: 'Email', value: 'priy@email.com', href: 'mailto:priy@email.com' },
-  { label: 'GitHub', value: 'github.com/priy', href: 'https://github.com/' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/priy', href: 'https://linkedin.com/' },
+  { label: 'Email', value: 'patelpriy29@gmail.com', href: 'mailto:patelpriy29@gmail.com' },
+  { label: 'GitHub', value: 'github.com/priypatel', href: 'https://github.com/priypatel' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/priy-patel', href: 'https://linkedin.com/in/priy-patel-251688201' },
 ];
 
 export default function About() {
@@ -35,7 +35,7 @@ export default function About() {
         >
           <p>
             I'm{' '}
-            <strong style={{ color: 'var(--text)', fontWeight: 500 }}>Priy</strong> — a full stack
+            <strong style={{ color: 'var(--text)', fontWeight: 500 }}>Priy Patel</strong> — a full stack
             developer with 2 years of hands-on experience building web products that work well and
             look even better.
           </p>
@@ -76,7 +76,8 @@ export default function About() {
               </a>
             ))}
             <a
-              href="#"
+              href="/Priy_Patel_Resume.pdf"
+              download
               className="btn-primary inline-flex items-center justify-center text-[13px] font-medium px-6 py-3 rounded-xl mt-1"
             >
               Download Resume ↓
