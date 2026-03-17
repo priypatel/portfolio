@@ -89,18 +89,10 @@ function FeaturedCard({ project }) {
           className="w-full rounded-xl overflow-hidden relative"
           style={{ height: '280px', border: '1px solid var(--border)', background: '#0d1117' }}
         >
-          <iframe
-            src={project.href}
-            title={`${project.title} preview`}
-            loading="lazy"
-            style={{
-              width: '185%',
-              height: '185%',
-              border: 'none',
-              transform: 'scale(0.54)',
-              transformOrigin: 'top left',
-              pointerEvents: 'none',
-            }}
+          <img
+            src={project.preview}
+            alt={`${project.title} preview`}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
           />
         </div>
       </div>
